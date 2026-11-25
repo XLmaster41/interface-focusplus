@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react'
 
+<<<<<<< HEAD
 export default function TaskDialog({ open, task, onClose, onSave, withPoints = false, heading }) {
+=======
+export default function TaskDialog({ open, task, onClose, onSave }) {
+>>>>>>> c954fcfc3220f4d4909fad464105bf939b37891c
   const ref = useRef(null)
   const formRef = useRef(null)
 
@@ -21,7 +25,10 @@ export default function TaskDialog({ open, task, onClose, onSave, withPoints = f
     if (!title) return
     onSave({
       id: task?.id,
+<<<<<<< HEAD
       points: Number(f.get('points')) || undefined,
+=======
+>>>>>>> c954fcfc3220f4d4909fad464105bf939b37891c
       title,
       priority: f.get('priority'),
       due: f.get('due'),
@@ -32,7 +39,11 @@ export default function TaskDialog({ open, task, onClose, onSave, withPoints = f
   return (
     <dialog ref={ref} aria-labelledby="dialog-title" onClose={onClose}>
       <div className="modal-head">
+<<<<<<< HEAD
         <h2 id="dialog-title">{heading || (task ? 'Editar tarefa' : 'Nova tarefa')}</h2>
+=======
+        <h2 id="dialog-title">{task ? 'Editar tarefa' : 'Nova tarefa'}</h2>
+>>>>>>> c954fcfc3220f4d4909fad464105bf939b37891c
         <button className="btn small" onClick={onClose} aria-label="Fechar formulário">✕</button>
       </div>
       {/* key força o formulário a recarregar os valores a cada abertura */}
@@ -52,6 +63,7 @@ export default function TaskDialog({ open, task, onClose, onSave, withPoints = f
             <label htmlFor="task-due">Prazo (opcional)</label>
             <input id="task-due" name="due" type="date" defaultValue={task?.due || ''} />
           </div>
+<<<<<<< HEAD
           {withPoints && (
             <div className="field span2">
               <label htmlFor="task-points">Pontos ao concluir</label>
@@ -59,6 +71,8 @@ export default function TaskDialog({ open, task, onClose, onSave, withPoints = f
               <div className="hint">Quanto maior a atividade, mais pontos ela vale.</div>
             </div>
           )}
+=======
+>>>>>>> c954fcfc3220f4d4909fad464105bf939b37891c
           <div className="field span2">
             <label htmlFor="task-steps">Etapas (opcional)</label>
             <textarea id="task-steps" name="steps" rows={4} placeholder="Uma etapa por linha" defaultValue={task?.steps.map((s) => s.title).join('\n') || ''} />

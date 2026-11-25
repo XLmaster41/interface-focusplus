@@ -187,6 +187,7 @@ body.dark #announce { color: #101b14 }
 .btn.social { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 4px; font-size: .84rem; min-width: 0 }
 .social-mark { width: 22px; height: 22px; border-radius: 50%; background: var(--soft); color: var(--accentdark); display: grid; place-items: center; font-size: .78rem; font-weight: 800 }
 @media (max-width: 550px) { .social-grid { grid-template-columns: 1fr } .role-opt span { display: none } }
+<<<<<<< HEAD
 
 /* ===== Login: abas, senha forte, erros ===== */
 .mode-tabs { display: grid; grid-template-columns: 1fr 1fr; background: var(--soft); border-radius: 12px; padding: 4px; margin-bottom: 18px }
@@ -262,3 +263,5 @@ body.dark .form-error { background: #4a2626; color: #ffd1d1 }
 .screen > .hero { margin-bottom: 22px }
 .screen > .pills + .layout, .screen > .tabs + .layout { margin-top: 0 }
 @media (max-width: 550px) { .strength-list { grid-template-columns: 1fr } .photo-field { flex-direction: column; align-items: flex-start } .menu { right: -8px } }
+=======
+>>>>>>> c954fcfc3220f4d4909fad464105bf939b37891c
